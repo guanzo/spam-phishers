@@ -17,7 +17,7 @@ async function spam () {
     const maxQueueSize = 100
     const queue = new PQueue({
         concurrency: 2,
-        timeout: 1000 * 60, // 1 hour
+        timeout: 1000 * 60,
     })
 
     // Tweak this as necessary
@@ -51,7 +51,6 @@ async function spam () {
                         "sec-fetch-site": "same-origin",
                         "sec-fetch-user": "?1",
                         "upgrade-insecure-requests": "1",
-                        "Referer": "https://meta-login.co/walletImport.php",
                         "Referrer-Policy": "strict-origin-when-cross-origin"
                     },
                     maxRedirects: 0,
